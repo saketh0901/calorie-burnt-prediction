@@ -57,7 +57,7 @@ def show():
             line=dict(color=COLORS["fire"], width=2.5),
             marker=dict(size=8, color=COLORS["amber"]),
             fill="tozeroy",
-            fillcolor=COLORS["fire"] + "22",
+            fillcolor="rgba(255,77,28,0.13)",
             name="Calories"
         ))
         fig.update_layout(

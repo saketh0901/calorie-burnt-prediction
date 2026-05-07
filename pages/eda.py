@@ -121,7 +121,7 @@ def show():
         corr = df[num_cols].corr()
         fig4 = px.imshow(
             corr, text_auto=".2f",
-            color_continuous_scale=[[0,"#1a1a1a"],[0.5,"#ff4d1c44"],[1,"#ff4d1c"]],
+            color_continuous_scale=[[0,"#1a1a1a"],[0.5,"rgba(255,77,28,0.27)"],[1,"#ff4d1c"]],
             template=TEMPLATE
         )
         fig4.update_layout(height=320, margin=dict(t=10,b=10,l=10,r=10),
