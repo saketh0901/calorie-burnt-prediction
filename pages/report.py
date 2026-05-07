@@ -11,6 +11,7 @@ def generate_pdf(meta, history):
     pdf = FPDF()
     pdf.set_auto_page_break(auto=True, margin=15)
     pdf.add_page()
+    pdf.set_doc_option("core_fonts_encoding", "windows-1252") 
 
     # ── Title Page ─────────────────────────────────────────────────────────────
     pdf.set_fill_color(13, 13, 13)
@@ -75,7 +76,7 @@ def generate_pdf(meta, history):
         "  - Exercise Duration (minutes)\n"
         "  - Heart Rate (bpm), Body Temperature (°C)\n"
         "  - Derived: BMI, Effort Index (HR × Duration)\n\n"
-        "Target: Calories burnt (continuous — regression problem)"
+        "Target: Calories burnt (continuous - regression problem)"
     )
 
     # ── 3. Model Results ───────────────────────────────────────────────────────
@@ -132,7 +133,7 @@ def generate_pdf(meta, history):
     # ── 6. Conclusion ──────────────────────────────────────────────────────────
     section("6. CONCLUSION")
     body(
-        "The XGBoost regressor achieved a near-perfect R² score of "
+        f"The XGBoost regressor achieved a near-perfect R2 score of "
         f"{results[meta['best_model']]['R2']:.4f} with a Mean Absolute Error of only "
         f"{results[meta['best_model']]['MAE']:.2f} kcal, demonstrating that calorie burn "
         "can be reliably predicted from biometric and workout data. The Effort Index "
