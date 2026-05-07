@@ -133,7 +133,7 @@ with st.sidebar:
     st.markdown("""
     <hr style='border-color:#ff4d1c22; margin: 1.5rem 0 0.8rem;'>
     <div style='font-size:0.7rem; color:#555; text-align:center;'>
-        Final Year Major Project<br>
+        Major Project<br>
         <span style='color:#ff4d1c88;'>ML · XGBoost · Streamlit</span>
     </div>
     """, unsafe_allow_html=True)
